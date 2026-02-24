@@ -1,0 +1,80 @@
+version: "3.9"
+
+secrets:
+  client_a_db:
+    external: true
+
+configs:
+  client_a_config:
+    external: true
+
+networks:
+  app-network:
+    driver: overlay
+
+volumes:
+  client_a_data:
+
+services:
+
+  traefik:
+    image: traefik:v2.10
+    command:
+      - "--providers.docker=true"
+      - "--providers.docker.swarmMode=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--providers.docker.network=multi_app-network"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    networks:
+      - app-network
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+
+  client-a:
+    image: shubiie/client-a-node:1.0
+    networks:
+      - app-network
+    secrets:
+      - client_a_db
+    configs:
+      - source: client_a_config
+        target: /app/config.env
+    volumes:
+      - client_a_data:/app/data
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+      update_config:
+        parallelism: 1
+        delay: 10s
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.client-a.rule=PathPrefix(`/client-a`)"
+        - "traefik.http.middlewares.client-a-strip.stripprefix.prefixes=/client-a"
+        - "traefik.http.routers.client-a.middlewares=client-a-strip"
+        - "traefik.http.services.client-a.loadbalancer.server.port=3000"
+
+  client-b:
+    image: shubiie/client-b-python:1.0
+    networks:
+      - app-network
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+      update_config:
+        parallelism: 1
+        delay: 10s
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.client-b.rule=PathPrefix(`/client-b`)"
+        - "traefik.http.middlewares.client-b-strip.stripprefix.prefixes=/client-b"
+        - "traefik.http.routers.client-b.middlewares=client-b-strip"
+        - "traefik.http.services.client-b.loadbalancer.server.port=8000"
