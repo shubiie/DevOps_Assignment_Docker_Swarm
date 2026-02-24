@@ -25,7 +25,6 @@ I used:
 
 ### NestJS App
 - Multi-stage Dockerfile
-- Production build only
 - `.dockerignore` used to exclude unnecessary files
 
 ### FastAPI App
@@ -75,6 +74,7 @@ Screenshots included:
 
 <img width="1917" height="153" alt="replica-distribution" src="https://github.com/user-attachments/assets/a2cd9cb6-fdcf-43f4-8df3-5f40ea6bef25" />
 
+<img width="1917" height="153" alt="replica-distribution" src="https://github.com/user-attachments/assets/3954a915-395d-4b12-8229-da34f82980a7" />
 
 ---
 
@@ -91,9 +91,9 @@ client_a_data
 
 Verified using:
 
-docker secret ls
-docker config ls
-docker volume ls
+- docker secret ls
+- docker config ls
+- docker volume ls
 
 <img width="1913" height="195" alt="secrets-configs-volumes" src="https://github.com/user-attachments/assets/3c11fe99-d5bd-4a69-bfa3-4bd9637dfc32" />
 
@@ -113,8 +113,8 @@ Routing configured:
 
 Tested using:
 
-curl http://<public-ip>/client-a/health
-curl http://<public-ip>/client-b/health
+- curl http://<public-ip>/client-a/health
+- curl http://<public-ip>/client-b/health
 
 Both services responded successfully.
 
