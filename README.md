@@ -47,7 +47,8 @@ Worker joined using join token.
 Verified cluster:
 
 docker node ls
-<img width="1917" height="153" alt="swarm-cluster" src="https://github.com/user-attachments/assets/bf7bf45e-7cf4-4784-aaf8-efa906f8f738" />
+
+<img width="1917" height="153" alt="swarm-cluster" src="https://github.com/user-attachments/assets/8f8c8d2e-8f24-4954-8ced-0065db81eaf4" />
 
 ---
 
@@ -72,7 +73,7 @@ Screenshots included:
 - Services running
 - Replica distribution
 
-<img width="1917" height="186" alt="services-running" src="https://github.com/user-attachments/assets/27b7a1a2-ed49-4843-8921-7051eb4b7f26" />
+<img width="1977" height="189" alt="replica-distribution" src="https://github.com/user-attachments/assets/63d18cb6-8073-4b25-9623-2230a9035e49" />
 
 ---
 
@@ -93,7 +94,8 @@ docker secret ls
 docker config ls
 docker volume ls
 
-<img width="1913" height="195" alt="secrets-configs-volumes" src="https://github.com/user-attachments/assets/5a8a8122-c958-4c9e-9fc2-d13516b1ff70" />
+<img width="1913" height="195" alt="secrets-configs-volumes" src="https://github.com/user-attachments/assets/3c11fe99-d5bd-4a69-bfa3-4bd9637dfc32" />
+
 
 ---
 
@@ -115,8 +117,7 @@ curl http://<public-ip>/client-b/health
 
 Both services responded successfully.
 
-Screenshot included.
-<img width="1917" height="153" alt="routing" src="https://github.com/user-attachments/assets/eb2b9d2b-d626-4408-804e-9a1d671d3883" />
+<img width="1917" height="153" alt="routing" src="https://github.com/user-attachments/assets/7f57719b-8c99-431d-91ba-5f459da795f0" />
 
 
 ---
@@ -129,7 +130,8 @@ docker service scale multi_client-a=6
 
 Containers were distributed across both nodes.
 
-<img width="1913" height="339" alt="scaling" src="https://github.com/user-attachments/assets/e83429fd-1537-41bc-9399-d4c78491947e" />
+<img width="1913" height="339" alt="scaling" src="https://github.com/user-attachments/assets/acbd954c-8f57-49a0-87bb-06c88bfbe6b9" />
+
 
 ---
 
@@ -141,7 +143,8 @@ docker service update --force multi_client-a
 
 Containers updated one by one without downtime.
 
-<img width="1913" height="220" alt="rolling-update" src="https://github.com/user-attachments/assets/8bdfaf6d-054c-493a-b7cf-ce483cbcf3c0" />
+<img width="1913" height="220" alt="rolling-update" src="https://github.com/user-attachments/assets/5223a4ec-2f7a-41b6-a801-f6be46a4e3c0" />
+
 
 ---
 ## 8. CI/CD Pipeline Design
