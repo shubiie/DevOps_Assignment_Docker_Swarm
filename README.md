@@ -15,9 +15,9 @@ The goal was to create a scalable setup with:
 I used:
 
 - 1 EC2 instance as Manager  
-- 1 EC2 instance as Worker  
-<img width="1918" height="1034" alt="EC2_instances" src="https://github.com/user-attachments/assets/35daedb7-bdc0-46cd-9051-fb5f4bdb9532" />
-
+- 1 EC2 instance as Worker
+  
+<img width="1918" height="1034" alt="EC2_instances" src="https://github.com/user-attachments/assets/8a46e82c-9605-4b66-b2fc-b4b7ff3997f3" />
 
 ---
 
