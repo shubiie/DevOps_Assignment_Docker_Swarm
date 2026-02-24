@@ -52,7 +52,7 @@ docker node ls
 
 ---
 
-## . Stack Deployment
+## Stack Deployment
 
 Deployed using:
 
@@ -78,7 +78,7 @@ Screenshots included:
 
 ---
 
-## . Secrets, Config and Volume
+## Secrets, Config and Volume
 
 Created Docker Secret and Config:
 
@@ -136,7 +136,7 @@ Containers were distributed across both nodes.
 
 ---
 
-##  Rolling Update
+## Rolling Update
 
 Triggered rolling update:
 
