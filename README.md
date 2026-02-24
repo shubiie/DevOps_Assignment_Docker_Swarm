@@ -52,7 +52,7 @@ docker node ls
 
 ---
 
-## 3. Stack Deployment
+## . Stack Deployment
 
 Deployed using:
 
@@ -78,7 +78,7 @@ Screenshots included:
 
 ---
 
-## 4. Secrets, Config and Volume
+## . Secrets, Config and Volume
 
 Created Docker Secret and Config:
 
@@ -100,7 +100,7 @@ docker volume ls
 
 ---
 
-## 5. Reverse Proxy (Traefik)
+## 3. Reverse Proxy (Traefik)
 
 Deployed Traefik as a Swarm service.
 
@@ -123,7 +123,7 @@ Both services responded successfully.
 
 ---
 
-## 6. Horizontal Scaling
+## 4. Horizontal Scaling
 
 Tested scaling:
 
@@ -136,7 +136,7 @@ Containers were distributed across both nodes.
 
 ---
 
-## 7. Rolling Update
+##  Rolling Update
 
 Triggered rolling update:
 
@@ -148,7 +148,7 @@ Containers updated one by one without downtime.
 
 
 ---
-## 8. CI/CD Pipeline Design
+## 5. CI/CD Pipeline Design
 
 To automate build and deployment, a CI/CD pipeline can be implemented using GitHub Actions.
 
@@ -195,7 +195,7 @@ This keeps environments separated and avoids accidental production deployments.
 
 ---
 
-## 9. Multi-Client Architecture Strategy
+## 6. Multi-Client Architecture Strategy
 
 If multiple clients are onboarded regularly (e.g., 20 per month), the architecture should scale while maintaining isolation.
 
@@ -266,7 +266,7 @@ This ensures critical clients can run on dedicated nodes if required.
 
 ---
 
-## 10. Monitoring & Logging
+## 7. Monitoring & Logging
 
 For a production-ready setup, monitoring and centralized logging are essential.
 
