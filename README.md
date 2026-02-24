@@ -172,18 +172,18 @@ docker build -t shubiie/client-a-node:${{ github.sha }} .
 
 - Push image to Docker Hub (or AWS ECR in production).
 
-docker push shubiie/client-a-node:${{ github.sha }}
+- docker push shubiie/client-a-node:${{ github.sha }}
 
 #### Step 4 – Deploy to Swarm
 
 - Pipeline connects to Swarm manager via SSH.
 - Update service with new image:
 
-docker service update --image shubiie/client-a-node:${{ github.sha }} multi_client-a
+- docker service update --image shubiie/client-a-node:${{ github.sha }} multi_client-a
 
 Since Docker Swarm supports rolling updates, deployment happens without downtime.
 
-### Branch-Based Deployment (Bonus)
+### Branch-Based Deployment
 
 - dev branch → deploy to development environment  
 - staging branch → deploy to staging  
