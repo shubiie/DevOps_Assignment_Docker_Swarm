@@ -73,7 +73,8 @@ Screenshots included:
 - Services running
 - Replica distribution
 
-<img width="1977" height="189" alt="replica-distribution" src="https://github.com/user-attachments/assets/63d18cb6-8073-4b25-9623-2230a9035e49" />
+<img width="1917" height="153" alt="replica-distribution" src="https://github.com/user-attachments/assets/a2cd9cb6-fdcf-43f4-8df3-5f40ea6bef25" />
+
 
 ---
 
