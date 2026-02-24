@@ -74,8 +74,6 @@ Screenshots included:
 
 <img width="1917" height="153" alt="replica-distribution" src="https://github.com/user-attachments/assets/a2cd9cb6-fdcf-43f4-8df3-5f40ea6bef25" />
 
-<img width="1917" height="153" alt="replica-distribution" src="https://github.com/user-attachments/assets/3954a915-395d-4b12-8229-da34f82980a7" />
-
 ---
 
 ## Secrets, Config and Volume
